@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Learning & Improvement Portal</title>
+
+    <link rel="stylesheet" href="1style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Student Learning & Improvement Portal</h1>
+    <p>P.V.I.Mission Marathi Mulanchi Shala</p>
+</header>
+
+<div class="container">
+
+    <!-- HOME -->
+    <div id="home" class="section active">
+
+        <h2>Select Your Class</h2>
+
+        <div class="card-box">
+
+            <div class="card" onclick="selectClass('Std. 1')">
+                <h3>Std. 1</h3>
+                <p>Basic Learning</p>
+            </div>
+
+            <div class="card" onclick="selectClass('Std. 2')">
+                <h3>Std. 2</h3>
+                <p>Basic Learning</p>
+            </div>
+
+            <div class="card" onclick="selectClass('Std. 3')">
+                <h3>Std. 3</h3>
+                <p>Primary Level</p>
+            </div>
+
+            <div class="card" onclick="selectClass('Std. 4')">
+                <h3>Std. 4</h3>
+                <p>Primary Level</p>
+            </div>
+
+            <div class="card" onclick="selectClass('Std. 5')">
+                <h3>Std. 5</h3>
+                <p>Primary Level</p>
+            </div>
+
+            <div class="card" onclick="selectClass('Std. 6')">
+                <h3>Std. 6</h3>
+                <p>Upper Primary</p>
+            </div>
+
+            <div class="card" onclick="selectClass('Std. 7')">
+                <h3>Std. 7</h3>
+                <p>Upper Primary</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SUBJECTS -->
+    <div id="subjects" class="section">
+
+        <h2 id="classTitle"></h2>
+
+        <h3>Select Subject</h3>
+
+        <div class="card-box">
+
+            <div class="card" onclick="selectSubject('Mathematics')">
+                <h3>➗ Mathematics</h3>
+            </div>
+
+            <div class="card" onclick="selectSubject('English')">
+                <h3>📖 English</h3>
+            </div>
+
+            <div class="card" onclick="selectSubject('Marathi')">
+                <h3>📚 Marathi</h3>
+            </div>
+
+            <div class="card" onclick="selectSubject('Hindi')">
+                <h3>📕 Hindi</h3>
+            </div>
+
+            <div class="card" onclick="selectSubject('EVS')">
+                <h3>🌱 EVS</h3>
+            </div>
+
+            <div class="card" onclick="selectSubject('Science')">
+                <h3>🔬 Science</h3>
+            </div>
+
+            <div class="card" onclick="selectSubject('Social Studies')">
+                <h3>🌍 Social Studies</h3>
+            </div>
+
+            <div class="card" onclick="selectSubject('GK')">
+                <h3>🧠 General Knowledge</h3>
+            </div>
+
+            <div class="card" onclick="selectSubject('Computer')">
+                <h3>💻 Computer</h3>
+            </div>
+
+            <div class="card" onclick="selectSubject('Drawing & Art')">
+                <h3>🎨 Drawing & Art</h3>
+            </div>
+
+            <div class="card" onclick="selectSubject('General Awareness')">
+                <h3>🌟 General Awareness</h3>
+            </div>
+
+        </div>
+
+        <button class="back" onclick="showSection('home')">
+            ← Back
+        </button>
+
+    </div>
+
+
+    <!-- LEVEL -->
+    <div id="level" class="section">
+
+        <h2 id="subjectTitle"></h2>
+
+        <p>Select Test Level</p>
+
+        <div class="card-box">
+
+            <div class="card" onclick="startQuiz('Easy')">
+                <h3>🟢 Easy</h3>
+                <p>Basic Questions</p>
+            </div>
+
+            <div class="card" onclick="startQuiz('Medium')">
+                <h3>🟡 Medium</h3>
+                <p>Practice Questions</p>
+            </div>
+
+            <div class="card" onclick="startQuiz('Hard')">
+                <h3>🔴 Hard</h3>
+                <p>Challenge Questions</p>
+            </div>
+
+        </div>
+
+        <button class="back" onclick="showSection('subjects')">
+            ← Back
+        </button>
+
+    </div>
+
+
+    <!-- QUIZ -->
+    <div id="quiz" class="section">
+
+        <div class="quiz-box">
+
+            <h2 id="quizTitle"></h2>
+
+            <p id="questionNumber"></p>
+
+            <h3 id="question"></h3>
+
+            <div id="options"></div>
+
+            <button onclick="nextQuestion()">
+                Next →
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- RESULT -->
+    <div id="result" class="section">
+
+        <div class="result">
+
+            <h2>🎉 Test Completed!</h2>
+
+            <p>Your Score</p>
+
+            <div class="score" id="score"></div>
+
+            <p id="feedback"></p>
+
+            <button onclick="showSection('home')">
+                Take Another Test
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="1script.js"></script>
+
+</body>
+</html>
